@@ -1,0 +1,120 @@
+@font-face {
+	font-family: OpenSans;
+	font-weight: 400;
+	src: url('./assets/fonts/OpenSans-Regular.woff2'),
+		url('./assets/fonts/OpenSans-Regular.woff');
+}
+@font-face {
+	font-family: OpenSans;
+	font-weight: 700;
+	src: url('./assets/fonts/OpenSans-Bold.woff2'),
+		url('./assets/fonts/OpenSans-Bold.woff');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	font-family: OpenSans, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0.3);
+	background-image: url('/bg.png');
+	overflow-x: hidden;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: inherit;
+	cursor: pointer;
+}
+
+p {
+	margin: 0;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-width: 380px;
+	min-height: 100%;
+}
+
+.container {
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+	background-image: url('/bg_2.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+
+	@media (max-width: 480px) {
+		padding: 10px;
+	}
+}
+
+header,
+main,
+section {
+	margin-bottom: 15px;
+
+	@media (max-width: 480px) {
+		margin-bottom: 10px;
+	}
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.footer {
+	margin-top: auto;
+	width: 100%;
+	padding: 5px 0;
+	position: relative;
+}
+
+.footer::before {
+	content: '';
+	position: absolute;
+	margin: 0 auto;
+	top: 0;
+	left: 50%;
+	width: 100vw;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.03);
+	transform: translateX(-50%);
+	z-index: -1;
+}
