@@ -5,6 +5,10 @@
 	gap: 20px;
 	width: 100%;
 
+	@media (max-width: 480px) {
+		gap: 5px;
+	}
+
 	&__title {
 		display: flex;
 		font-size: 16px;
